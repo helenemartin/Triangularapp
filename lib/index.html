@@ -1,13 +1,18 @@
   
 <!doctype html>
-<html ng-app="store">
-<head>
-  <title>Circularapp</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />   
-</head>
-<body>
-  <script type="text/javascript" src="lib/Angular/angular.min.js"></script>
-  <script type="text/javascript" src="lib/Angular/app.js"></script>
-  <p>{{"hello" + "you"}}</p>
-</body>
+<html ng-app="gemStore">
+  <head>
+    <title>Triangularapp</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> 
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="angular/app.js"></script>  
+  </head>
+  <body class="container" ng-controller="StoreController as store">
+    <div class="product row" ng-repeat="product in store.products">
+      <h3>{{product.name}}
+        <em class="pull-right">{{product.price | currency}}</em>
+      </h3>
+      <button ng-show="products.canPurchase">Add to Cart</button>
+    </div>
+  </body>
 </html>
