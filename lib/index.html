@@ -15,3 +15,34 @@
     <script type="text/javascript" src="angular/app.js"></script>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="gemSstore">
+<head>
+  <meta charset="UTF-8">
+  <title>Triangular App</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+  <!-- <link rel="stylesheet" href="styles/app.css" type="text/css"> -->
+</head>
+<body class="container">
+  <ul class="products list-unstyled" ng-controller="StoreController as store">
+    <div ng-controller="StoreController as store">
+      <h1> {{store.product.name}} </h1>
+      <h2> &pound;{{store.product.price}} </h2>
+      <p> {{store.product.description}} </p>   
+    </div>
+    <li class="row" ng-repeat="product in store.products">
+      <h3> <product-title /> </h3>
+
+      <product-gallery></product-gallery>
+
+      <product-panels></product-panels>
+
+      <br class="clearfix" />
+    </li>
+  </ul> <!-- class="products" -->
+  <script type="text/javascript" src="angular/angular.min.js"></script>
+  <script type="text/javascript" src="angular/app.js"></script>
+</body>
+</html>
