@@ -9,9 +9,9 @@
 <body class="container">
   <ul class="products list-unstyled" ng-controller="StoreController as store">
     <div ng-controller="StoreController as store">
-      <h1> {{store.product.name}} </h1>
-      <h2> &pound;{{store.product.price}} </h2>
-      <p> {{store.product.description}} </p>   
+      <h1> {{product.name}} </h1>
+      <h2> &pound;{{product.price}} </h2>
+      <p> {{product.description}} </p>   
     </div>
     <li class="row" ng-repeat="product in store.products">
       <h3> <product-title /> </h3>
